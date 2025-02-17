@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal Crystals | Handcrafted Crystal Jewelry</title>
+    <title>BeSpoke | Bespoke Jewelry</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">COASTAL CRYSTALS</div>
+        <div class="logo">BeSpoke Jewelry</div>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
-            <a href="#services">Collections</a>
-            <a href="#portfolio">Featured</a>
+            <a href="#process">Our Process</a>
+            <a href="#portfolio">Gallery</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="menu-btn">
@@ -23,11 +23,11 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Handcrafted Crystal Jewelry</h1>
-            <p class="tagline">Where Ocean Meets Elegance</p>
+            <h1>Bespoke Jewelry</h1>
+            <p class="tagline">Where Your Vision Meets Our Artistry</p>
             <div class="cta-buttons">
-                <button class="primary-btn">Shop Collection</button>
-                <button class="secondary-btn">Learn More</button>
+                <button class="primary-btn" id="shopBtn">Create Your Piece</button>
+                <button class="secondary-btn" id="aboutBtn">Learn More</button>
             </div>
         </div>
         <div class="hero-graphics">
@@ -37,64 +37,114 @@
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Collections</h2>
+    <!-- Custom Piece Modal -->
+    <div class="modal" id="shopModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-wand-sparkles modal-icon"></i>
+                <h2>Create Your Unique Piece</h2>
+                <p>Every piece of jewelry we create is as unique as you are. Our master artisans work directly with each client to craft a completely custom piece that perfectly captures your vision and energy.</p>
+                <div class="process-steps">
+                    <div class="step">
+                        <i class="fas fa-comments"></i>
+                        <h4>Consultation</h4>
+                        <p>Share your vision and inspiration with our designers</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-gem"></i>
+                        <h4>Crystal Selection</h4>
+                        <p>Choose from our curated collection of premium crystals</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Design</h4>
+                        <p>Collaborate on the perfect design for your piece</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-magic"></i>
+                        <h4>Creation</h4>
+                        <p>Watch as your unique piece comes to life</p>
+                    </div>
+                </div>
+                <p class="modal-highlight">Begin your journey to owning a one-of-a-kind crystal masterpiece crafted exclusively for you.</p>
+                <button class="primary-btn consultation-btn">Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-heart modal-icon"></i>
+                <h2>Our Story</h2>
+                <p>For over two decades, Coastal Crystals has been pioneering the art of bespoke crystal jewelry. Our journey began with a passion for creating unique pieces that capture both the ocean's beauty and each individual's personal energy.</p>
+                <p>Every piece we create is born from a collaboration between our master artisans and you, our valued client. We don't believe in mass production – instead, we dedicate our expertise to crafting one-of-a-kind pieces that tell your story.</p>
+                <p class="modal-highlight">Our commitment to individual expression and artisanal excellence has made us the trusted choice for those seeking truly unique crystal jewelry. Each piece we create is a singular masterpiece, never to be replicated.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="process" class="services">
+        <h2>Our Bespoke Process</h2>
         <div class="services-grid">
             <div class="service-card">
-                <i class="fas fa-gem"></i>
-                <h3>Necklaces</h3>
-                <p>Elegant crystal pendants and chains</p>
+                <i class="fas fa-comments"></i>
+                <h3>Personal Consultation</h3>
+                <p>Share your vision and let us guide you through the possibilities</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-ring"></i>
-                <h3>Rings</h3>
-                <p>Stunning crystal-adorned rings</p>
+                <i class="fas fa-gem"></i>
+                <h3>Crystal Selection</h3>
+                <p>Choose from our premium crystal collection</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Custom Design</h3>
+                <p>Collaborate on your perfect piece</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-magic"></i>
-                <h3>Bracelets</h3>
-                <p>Healing crystal bracelets and bangles</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-star"></i>
-                <h3>Earrings</h3>
-                <p>Sparkling crystal studs and drops</p>
+                <h3>Artisan Crafting</h3>
+                <p>Watch your vision become reality</p>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
-        <h2>Featured Pieces</h2>
+        <h2>Custom Creation Gallery</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <div class="portfolio-content">
-                    <h3>Ocean Mist Necklace</h3>
-                    <p>Aquamarine & Sea Glass</p>
+                    <h3>Moonlit Essence Pendant</h3>
+                    <p>Custom Moonstone & Aquamarine</p>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-content">
-                    <h3>Sunset Amethyst Ring</h3>
-                    <p>Purple & Rose Gold</p>
+                    <h3>Spirit's Journey Ring</h3>
+                    <p>Bespoke Amethyst Design</p>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-content">
-                    <h3>Tidal Wave Bracelet</h3>
-                    <p>Blue Topaz & Pearls</p>
+                    <h3>Ocean's Heart Bracelet</h3>
+                    <p>Custom Topaz & Pearl Creation</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2>Start Your Journey</h2>
         <div class="contact-container">
             <form class="contact-form">
                 <input type="text" placeholder="Name" required>
                 <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit" class="primary-btn">Send Message</button>
+                <textarea placeholder="Tell us about your dream piece..." required></textarea>
+                <button type="submit" class="primary-btn">Begin Creation</button>
             </form>
         </div>
     </section>
@@ -102,8 +152,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Coastal Crystals</h4>
-                <p>Handcrafted Crystal Jewelry</p>
+                <h4>BeSpoke</h4>
+                <p>Bespoke Jewelry</p>
             </div>
             <div class="footer-section">
                 <h4>Connect</h4>

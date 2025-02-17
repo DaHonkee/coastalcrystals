@@ -1,3 +1,54 @@
+// Modal functionality
+const shopBtn = document.getElementById('shopBtn');
+const aboutBtn = document.getElementById('aboutBtn');
+const shopModal = document.getElementById('shopModal');
+const aboutModal = document.getElementById('aboutModal');
+const closeButtons = document.querySelectorAll('.close-modal');
+
+function openModal(modal) {
+    modal.style.display = 'flex';
+    // Allow time for display:flex to take effect before adding the show class
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeModal(modal) {
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    }, 300); // Match the transition duration
+}
+
+shopBtn.addEventListener('click', () => openModal(shopModal));
+aboutBtn.addEventListener('click', () => openModal(aboutModal));
+
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
+    });
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        closeModal(e.target);
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const openModal = document.querySelector('.modal.show');
+        if (openModal) {
+            closeModal(openModal);
+        }
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
